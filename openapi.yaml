@@ -1,0 +1,27 @@
+openapi: 3.0.1
+info:
+  title: Google Calendar API Proxy
+  description: Proxy API to interact with a user's Google Calendar.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /calendar/events:
+    get:
+      operationId: getCalendarEvents
+      summary: Get upcoming calendar events
+      responses:
+        '200':
+          description: A list of calendar events
+      security:
+        - oauth2: []
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: http://localhost:5000/oauth/callback
+          scopes:
+            https://www.googleapis.com/auth/calendar: View and manage your calendar

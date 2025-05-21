@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Google Calendar Proxy",
+  "name_for_model": "google_calendar_proxy",
+  "description_for_human": "Access your Google Calendar events.",
+  "description_for_model": "Plugin for accessing Google Calendar events.",
+  "auth": {
+    "type": "oauth",
+    "client_url": "https://accounts.google.com/o/oauth2/v2/auth",
+    "scope": "https://www.googleapis.com/auth/calendar",
+    "authorization_url": "https://accounts.google.com/o/oauth2/v2/auth",
+    "token_url": "https://oauth2.googleapis.com/token"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5000/openapi.yaml",
+    "is_user_authenticated": true
+  }
+}
