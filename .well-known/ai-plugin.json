@@ -13,7 +13,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "http://localhost:5000/openapi.yaml",
+    "url": "https://orso-actions.onrender.com/openapi.yaml",
     "is_user_authenticated": true
   }
 }
