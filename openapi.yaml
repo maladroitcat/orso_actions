@@ -4,7 +4,7 @@ info:
   description: Proxy API to interact with a user's Google Calendar.
   version: 1.0.0
 servers:
-  - url: http://localhost:5000
+  - url: https://orso-actions.onrender.com
 paths:
   /calendar/events:
     get:
