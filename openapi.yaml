@@ -3,8 +3,10 @@ info:
   title: Google Calendar API Proxy
   description: Proxy API to interact with a user's Google Calendar.
   version: 1.0.0
+
 servers:
   - url: https://orso-actions.onrender.com
+
 paths:
   /calendar/events:
     get:
@@ -15,6 +17,7 @@ paths:
           description: A list of calendar events
       security:
         - oauth2: []
+
 components:
   securitySchemes:
     oauth2:
@@ -22,6 +25,6 @@ components:
       flows:
         authorizationCode:
           authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
-          tokenUrl: http://localhost:5000/oauth/callback
+          tokenUrl: https://oauth2.googleapis.com/token
           scopes:
             https://www.googleapis.com/auth/calendar: View and manage your calendar
