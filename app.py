@@ -55,4 +55,6 @@ def openapi_spec():
     return send_file("openapi.yaml")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    """Uncomment below for local"""
+    # app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
