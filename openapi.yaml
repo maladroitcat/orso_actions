@@ -6,6 +6,7 @@ info:
 
 servers:
   - url: https://orso-actions.onrender.com
+    description: Live server
 
 paths:
   /calendar/events:

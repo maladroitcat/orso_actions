@@ -52,7 +52,7 @@ def plugin_manifest():
 
 @app.route("/openapi.yaml")
 def openapi_spec():
-    return send_file("openapi.yaml")
+    return send_file("openapi.yaml", mimetype="text/yaml")
 
 if __name__ == "__main__":
     """Uncomment below for local"""
